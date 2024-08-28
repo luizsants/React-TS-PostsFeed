@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css'
 
@@ -12,7 +13,7 @@ export function Post() {
 
       <header>
         <div className={styles.author}>
-          <img className={styles.avatar} src="https://github.com/luizsants.png" />
+          <Avatar src="https://github.com/luizsants.png" />
           <div className={styles.authorInfo}>
             <strong>Luiz</strong>
             <span>Web Developer</span>
