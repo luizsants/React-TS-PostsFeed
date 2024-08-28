@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 
+import { Comment } from './Comment';
 import styles from './Post.module.css'
 
 export function Post() {
   return (
     <article className={styles.post}>
-      
+
+    
+      {/** Cabeçalho */}
+
       <header>
         <div className={styles.author}>
           <img className={styles.avatar} src="https://github.com/luizsants.png" />
@@ -17,6 +21,9 @@ export function Post() {
 
         <time title="27 de agosto às 21:47" dateTime="2022-05-11 21:47:00">Publicado há 1h</time>
       </header>
+
+    
+      {/** Conteúdo */}
 
       <div className={styles.content}>
         <p>Fala galeraa 👋 </p>
@@ -30,6 +37,28 @@ export function Post() {
           <a href="">#nlw </a>{' '}
           <a href="">#rocketseat</a>
         </p>
+      </div>
+
+      {/** Formulário */}
+
+      <form className={styles.commentForm}>
+
+        <strong>Deixe seu feedback</strong>
+
+        <textarea
+          placeholder='Deixe um comentário'
+
+        />
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+      </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+
       </div>
 
     </article>
